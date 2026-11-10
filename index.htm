@@ -22,17 +22,17 @@
 
 <main>
 <section id="inicio" class="hero">
-  <h1 class="name">María Cristina<br>Andrade Echeverría</h1>
-  <p class="role">Estudiante de Ingeniería en Ciencias de la Computación en la ESPOL, nivel 300I, con enfoque en desarrollo backend y análisis de datos.</p>
-  <div class="cta">
+  <h1 class="name" data-anim="blur-in">María Cristina<br>Andrade Echeverría</h1>
+  <p class="role" data-anim="slide-right">Estudiante de Ingeniería en Ciencias de la Computación en la ESPOL, nivel 300I, con enfoque en desarrollo backend y análisis de datos.</p>
+  <div class="cta" data-anim="zoom-in">
     <a class="btn primary" href="#proyectos">Ver proyectos</a>
     <a class="btn" href="#contacto">Contacto</a>
   </div>
 </section>
 
 <section id="sobre-mi" class="section">
-  <h2>Sobre mí</h2>
-  <div class="tabs" role="tablist">
+  <h2 data-anim="slide-left">Sobre mí</h2>
+  <div class="tabs" role="tablist" data-anim="slide-down">
     <button role="tab" class="tab active" data-tab="p1" aria-selected="true">Enfoque profesional</button>
     <button role="tab" class="tab" data-tab="p2" aria-selected="false">Metodología de trabajo</button>
     <button role="tab" class="tab" data-tab="p3" aria-selected="false">Participación y trabajo en equipo</button>
@@ -52,14 +52,14 @@
 </section>
 
 <section id="proyectos" class="section">
-  <h2>Proyectos</h2>
+  <h2 data-anim="slide-left">Proyectos</h2>
   <div class="tabs filter" role="tablist" data-target="#lista-proyectos">
     <button role="tab" class="tab active" data-show="todos" aria-selected="true">Todos</button>
     <button role="tab" class="tab" data-show="curso" aria-selected="false">Proyectos del curso</button>
     <button role="tab" class="tab" data-show="otros" aria-selected="false">Otros proyectos</button>
   </div>
   <div class="projects" id="lista-proyectos">
-    <article class="card" data-cat="curso">
+    <article class="card" data-cat="curso" data-anim="slide-right">
       <h3>Dashboard</h3>
       <p class="sub">Panel de control interactivo por componentes.</p>
       <div class="body">
@@ -68,7 +68,7 @@
       </div>
       <a class="link" href="https://github.com/marandradec/dashboard" target="_blank" rel="noopener">Ver repositorio ⟶</a>
     </article>
-    <article class="card" data-cat="curso">
+    <article class="card" data-cat="curso" data-anim="zoom-in">
       <h3>Chancho Fest Landing</h3>
       <p class="sub">Sitio web de una sola página sobre un evento.</p>
       <div class="body">
@@ -77,7 +77,7 @@
       </div>
       <a class="link" href="https://github.com/marandradec/chancho-fest-landing" target="_blank" rel="noopener">Ver repositorio ⟶</a>
     </article>
-    <article class="card" data-cat="otros">
+    <article class="card" data-cat="otros" data-anim="slide-left">
       <h3>EcoTrack</h3>
       <p class="sub">Gestión de residuos y reciclaje urbano.</p>
       <div class="body">
@@ -86,7 +86,7 @@
       </div>
       <a class="link" href="https://github.com/marandradec/EcoTrack" target="_blank" rel="noopener">Ver repositorio ⟶</a>
     </article>
-    <article class="card" data-cat="otros">
+    <article class="card" data-cat="otros" data-anim="slide-right">
       <h3>Go PLY Analyzer</h3>
       <p class="sub">Analizador léxico y sintáctico de código Go.</p>
       <div class="body">
@@ -95,7 +95,7 @@
       </div>
       <a class="link" href="https://github.com/marandradec/go-ply-analyzer" target="_blank" rel="noopener">Ver repositorio ⟶</a>
     </article>
-    <article class="card" data-cat="otros">
+    <article class="card" data-cat="otros" data-anim="zoom-in">
       <h3>Furina Landing Page</h3>
       <p class="sub">Sitio web interactivo ambientado en un videojuego.</p>
       <div class="body">
@@ -108,8 +108,8 @@
 </section>
 
 <section id="tecnologias" class="section">
-  <h2>Tecnologías</h2>
-  <p class="intro">Herramientas aplicadas en los proyectos del curso y en otros proyectos, junto con su uso en cada caso.</p>
+  <h2 data-anim="slide-left">Tecnologías</h2>
+  <p class="intro" data-anim="slide-down">Herramientas aplicadas en los proyectos del curso y en otros proyectos, junto con su uso en cada caso.</p>
   <div class="tabs filter" role="tablist" data-target="#lista-tec">
     <button role="tab" class="tab active" data-show="todos" aria-selected="true">Todas</button>
     <button role="tab" class="tab" data-show="curso" aria-selected="false">Del curso</button>
@@ -130,9 +130,9 @@
 </section>
 
 <section id="contacto" class="section contact">
-  <h2>Contacto</h2>
-  <p class="intro">Estoy abierta a conectar con profesionales y a participar en proyectos innovadores.</p>
-  <div class="links">
+  <h2 data-anim="slide-left">Contacto</h2>
+  <p class="intro" data-anim="slide-down">Estoy abierta a conectar con profesionales y a participar en proyectos innovadores.</p>
+  <div class="links" data-anim="zoom-in">
     <a class="btn primary" href="mailto:marcrand@espol.edu.ec">Escribir un correo</a>
     <a class="btn" href="https://github.com/marandradec" target="_blank" rel="noopener">GitHub</a>
     <a class="btn" href="https://www.linkedin.com/in/mar%C3%ADa-andrade" target="_blank" rel="noopener">LinkedIn</a>
@@ -142,6 +142,8 @@
 
 <footer>© 2026 María Cristina Andrade Echeverría. Escuela Superior Politécnica del Litoral.</footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
