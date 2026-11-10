@@ -41,6 +41,8 @@ a{color:inherit;text-decoration:none}
 .tech-row p{color:var(--muted)}
 .contact{text-align:left;padding-bottom:8rem}
 footer{text-align:center;padding:2rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+@media(max-width:700px){.nav nav{gap:.9rem}.nav nav a{font-size:.8rem}.tech-row{grid-template-columns:1fr;gap:.3rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 /* ---- v2 ---- */
 .tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
@@ -63,4 +65,15 @@ html,body,main{overflow-x:clip}
 .card{min-width:0}
 .card p,.card h3,.tech-row p,.tech-row h3{overflow-wrap:anywhere}
 .btn{text-align:center}
+@media(max-width:600px){
+  .nav{flex-direction:column;gap:.35rem;padding:.6rem 4vw}
+  .nav nav{flex-wrap:wrap;justify-content:center;gap:.4rem 1rem}
+  .hero{padding-top:8rem}
+  .section{padding:4rem 5vw}
+  .section h2{margin-bottom:1.5rem}
+  .projects{grid-template-columns:1fr}
+  .cta,.links{flex-direction:column;align-items:stretch}
+  .tab{font-size:.88rem}
+  .tabs{gap:.4rem}
+}
 .body{display:flex;flex-direction:column;gap:.9rem;align-content:flex-start}
