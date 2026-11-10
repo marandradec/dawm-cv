@@ -2,6 +2,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font:400 1rem/1.7 Inter,system-ui,sans-serif;overflow-x:hidden}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;opacity:.55}
 main,.nav,footer{position:relative;z-index:1}
 h1,h2,h3,.logo{font-family:Sora,sans-serif}
 a{color:inherit;text-decoration:none}

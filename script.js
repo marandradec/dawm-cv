@@ -59,3 +59,33 @@ document.querySelectorAll(".filter").forEach((group) => {
     });
   });
 });
+
+// Fondo de partículas azules suaves
+const c = document.getElementById("bg"), ctx = c.getContext("2d");
+let w, h, pts;
+function resize() {
+  w = c.width = innerWidth; h = c.height = innerHeight;
+  pts = Array.from({ length: Math.min(70, Math.floor(w / 18)) }, () => ({
+    x: Math.random() * w, y: Math.random() * h,
+    vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3
+  }));
+}
+function draw() {
+  ctx.clearRect(0, 0, w, h);
+  pts.forEach((p, i) => {
+    p.x = (p.x + p.vx + w) % w; p.y = (p.y + p.vy + h) % h;
+    ctx.fillStyle = "rgba(111,160,255,.8)";
+    ctx.beginPath(); ctx.arc(p.x, p.y, 1.5, 0, 7); ctx.fill();
+    for (let j = i + 1; j < pts.length; j++) {
+      const d = Math.hypot(p.x - pts[j].x, p.y - pts[j].y);
+      if (d < 120) {
+        ctx.strokeStyle = `rgba(47,107,255,${.25 * (1 - d / 120)})`;
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(pts[j].x, pts[j].y); ctx.stroke();
+      }
+    }
+  });
+  requestAnimationFrame(draw);
+}
+addEventListener("resize", resize);
+resize();
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) draw();
